@@ -41,8 +41,8 @@ class MainActivity : AppCompatActivity(), VideoPlayerAdapter.BookmarkCallback  {
         simpleExoplayer.playWhenReady = false
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onDestroy() {
+        super.onDestroy()
         simpleExoplayer.run {
             stop()
             release()
